@@ -1,0 +1,16 @@
+server:
+  port: 8080
+spring:
+  datasource:
+    url: jdbc:mysql://localhost:3306/employee_db?useSSL=false&serverTimezone=Asia/Shanghai
+    username: root
+    password: gyz05110325
+    driver-class-name: com.mysql.cj.jdbc.Driver
+  mvc:
+    hidden method:
+      filter: { enabled: true }
+mybatis:
+  type-aliases-package: com.example.employeesystem.entity
+  mapper-locations: classpath:mapper/*.xml
+  configuration:
+    map-underscore-to-camel-case: true
