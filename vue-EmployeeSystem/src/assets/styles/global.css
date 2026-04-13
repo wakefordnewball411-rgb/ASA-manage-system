@@ -1,0 +1,79 @@
+/*清空默认边距，统一盒模型*/
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  /* 解决移动端点击高亮，PC端兼容无影响 */
+  -webkit-tap-highlight-color: transparent;
+}
+
+/* 2. 统一body基础样式：字体、背景、行高（贴合管理系统） */
+body {
+  font-family: "Microsoft YaHei", "PingFang SC", "Helvetica Neue", Helvetica, Arial, sans-serif;
+  font-size: 14px; /* 和Element Plus默认字号一致 */
+  line-height: 1.5;
+  color: #333;
+  background-color: #747e8e; /* 浅灰背景，适配管理系统视觉 */
+  overflow-x: hidden; /* 禁止横向滚动，避免页面变形 */
+}
+
+/* 3. 重置列表样式：去掉默认圆点/数字 */
+ul, ol, li {
+  list-style: none;
+}
+
+/* 4. 重置链接样式：去掉下划线，hover适配Element主题色 */
+a {
+  text-decoration: none;
+  color: #333;
+  transition: color 0.2s ease; /* 过渡动画更丝滑 */
+}
+a:hover {
+  color: #1989fa; /* Element Plus主色调，统一hover样式 */
+}
+
+/* 5. 重置表单元素：统一样式，去掉默认边框/轮廓 */
+input, button, select, textarea {
+  font-family: inherit;
+  font-size: inherit;
+  line-height: inherit;
+  border: none;
+  outline: none;
+  background: transparent;
+}
+
+/* 6. 重置按钮样式：去掉默认样式，聚焦无轮廓 */
+button {
+  cursor: pointer;
+}
+button:focus {
+  outline: none;
+}
+
+/* 7. 重置图片样式：自适应，去掉默认边框 */
+img {
+  max-width: 100%;
+  vertical-align: middle;
+  border: 0;
+}
+
+/* 8. 统一表格样式：合并边框，无间距 */
+table {
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+
+/* 9. 让根容器铺满屏幕（管理系统必备） */
+html, body, #app {
+  height: 100%;
+}
+
+/* 10. 清除浮动（兼容旧写法，避免布局塌陷） */
+.clearfix::after {
+  content: "";
+  display: block;
+  clear: both;
+  height: 0;
+  visibility: hidden;
+}
+
